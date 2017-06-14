@@ -1,2 +1,3 @@
 #!/bin/bash
-nohup motion -c motion/motion.conf &
+source mukoyama.conf
+nohup motion -c motion.conf &

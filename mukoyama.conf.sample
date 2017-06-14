@@ -1,0 +1,4 @@
+export MUKOYAMA_URL=https://mukoyama.lmlab.net:443
+export MUKOYAMA_ID=XX
+export MUKOYAMA_TOKEN=XXXXXXXXXXXX
+export MOTION_HOME=/home/pi/motion_for_mukoyama
