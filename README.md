@@ -32,5 +32,5 @@ export MOTION_HOME=(このファイルの置かれたディレクトリ)
 
 ## 起動
 ```
-./start.sh
+./bin/start.sh
 ```
