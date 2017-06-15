@@ -31,6 +31,7 @@ export MOTION_HOME=(このファイルの置かれたディレクトリ)
 export MOTION_TARGET_DIR=(画像の保存先ディレクトリ)
 export MOTION_THRESHOLD=(動体検出の閾値)
 export MOTION_STREAM_LOCALHOST=(on/off 外部ホストにストリーミングするか)
+export MOTION_SNAPSHOT_INTERVAL=(定時撮影の間隔秒 0の時は定時撮影しない)
 ```
 
 ## 起動
