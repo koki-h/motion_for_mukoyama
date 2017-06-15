@@ -166,7 +166,7 @@ switchfilter off
 
 # Threshold for number of changed pixels in an image that
 # triggers motion detection (default: 1500)
-threshold 100
+threshold <%= threshold %>
 
 # Automatically tune the threshold down if possible (default: off)
 threshold_tune off
@@ -406,7 +406,7 @@ text_double on
 
 # Target base directory for pictures and films
 # Recommended to use absolute path. (Default: current working directory)
-target_dir /mnt/usb_hdd/motion
+target_dir <%= target_dir %>
 
 # File path for snapshots (jpeg or ppm) relative to target_dir
 # Default: %v-%Y%m%d%H%M%S-snapshot
@@ -468,7 +468,7 @@ stream_motion on
 stream_maxrate 1
 
 # Restrict stream connections to localhost only (default: on)
-stream_localhost off
+stream_localhost <%= stream_localhost %>
 
 # Limits the number of images per connection (default: 0 = unlimited)
 # Number can be defined by multiplying actual stream rate by desired number of seconds

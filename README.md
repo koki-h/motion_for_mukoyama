@@ -28,6 +28,9 @@ export MUKOYAMA_URL=https://mukoyama.lmlab.net:443
 export MUKOYAMA_ID=(mukoyamaプロジェクトで発行されたID)
 export MUKOYAMA_TOKEN=(mukoyamaプロジェクトで発行された送信用トークン)
 export MOTION_HOME=(このファイルの置かれたディレクトリ)
+export MOTION_TARGET_DIR=(画像の保存先ディレクトリ)
+export MOTION_THRESHOLD=(動体検出の閾値)
+export MOTION_STREAM_LOCALHOST=(on/off 外部ホストにストリーミングするか)
 ```
 
 ## 起動
