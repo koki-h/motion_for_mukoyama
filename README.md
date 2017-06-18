@@ -1,5 +1,6 @@
 # Motion for Mukoyama
-動体検出プログラムMotionを使用してMukoyamaプロジェクトのサーバへ送信します。
+動体検出プログラムMotionを使用して画像を撮影し、Mukoyamaプロジェクトのサーバへ送信します。
+Motionが動体を検出した時とMOTION_SNAPSHOT_INTERVALで設定された定時に画像撮影及びサーバ送信が行われます。
 raspberry pi と raspberry piカメラモジュールを使用します。
 
 ## motionのインストール
