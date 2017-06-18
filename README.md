@@ -27,7 +27,7 @@ disable_camera_led=1
 export MUKOYAMA_URL=https://mukoyama.lmlab.net:443
 export MUKOYAMA_ID=(mukoyamaプロジェクトで発行されたID)
 export MUKOYAMA_TOKEN=(mukoyamaプロジェクトで発行された送信用トークン)
-export MUKOYAMA_DELETE_IMG=(mukoyamaに画像送信後、その画像を削除する)
+export MUKOYAMA_DELETE_IMG=(mukoyamaに画像送信後、その画像を削除するかどうか。trueの時削除し、それ以外は削除しない。)
 export MOTION_HOME=(このファイルの置かれたディレクトリ)
 export STD_LOG_FILE=(標準出力の接続先 ログ出力しない場合は/dev/null)
 export ERR_LOG_FILE=(標準エラー出力の接続先 ログ出力しない場合は/dev/null)
@@ -53,5 +53,5 @@ sudo mount -t tmpfs -o size=10m tmpfs /mnt/motion
 - mukoyama.confを編集、マウントされたメモリ領域を画像を保存先として設定する。
 ```
 export MOTION_TARGET_DIR=/mnt/motion
-export DELETE_IMG_AFTER_POST=true
+export MUKOYAMA_DELETE_IMG=true
 ```
