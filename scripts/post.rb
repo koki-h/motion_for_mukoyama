@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'fileutils'
+
 def send_picture
   ts = timestamp($filename)
   u = "#{$url}/pictures/upload?id=#{$id}&token=#{$token}&time_stamp=#{ts}&motion_sensor=#{$motion_sensor.to_s}"
@@ -22,4 +24,8 @@ $filename = ARGV[0] # saved file name
 $url      = ENV['MUKOYAMA_URL']
 $id       = ENV['MUKOYAMA_ID']
 $token    = ENV['MUKOYAMA_TOKEN']
+$delete_img = ENV['MUKOYAMA_DELETE_IMG']
 send_picture
+if $delete_img == 'true'
+  FileUtils.rm $filename
+end

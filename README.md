@@ -27,6 +27,7 @@ disable_camera_led=1
 export MUKOYAMA_URL=https://mukoyama.lmlab.net:443
 export MUKOYAMA_ID=(mukoyamaプロジェクトで発行されたID)
 export MUKOYAMA_TOKEN=(mukoyamaプロジェクトで発行された送信用トークン)
+export MUKOYAMA_DELETE_IMG=(mukoyamaに画像送信後、その画像を削除する)
 export MOTION_HOME=(このファイルの置かれたディレクトリ)
 export STD_LOG_FILE=(標準出力の接続先 ログ出力しない場合は/dev/null)
 export ERR_LOG_FILE=(標準エラー出力の接続先 ログ出力しない場合は/dev/null)
@@ -39,4 +40,18 @@ export MOTION_SNAPSHOT_INTERVAL=(定時撮影の間隔秒 0の時は定時撮影
 ## 起動
 ```
 ./bin/start.sh
+```
+
+## 書き込み先設定
+SDカードの書き込み回数制限が気になる場合はメモリを画像の一時保存領域として使う
+- メモリ領域をマウントする
+```
+sudo mkdir /mnt/motion
+sudo mount -t tmpfs -o size=10m tmpfs /mnt/motion
+```
+
+- mukoyama.confを編集、マウントされたメモリ領域を画像を保存先として設定する。
+```
+export MOTION_TARGET_DIR=/mnt/motion
+export DELETE_IMG_AFTER_POST=true
 ```
