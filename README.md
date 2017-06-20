@@ -36,6 +36,7 @@ export MOTION_TARGET_DIR=(画像の保存先ディレクトリ)
 export MOTION_THRESHOLD=(動体検出の閾値)
 export MOTION_STREAM_LOCALHOST=(on/off 外部ホストにストリーミングするか)
 export MOTION_SNAPSHOT_INTERVAL=(定時撮影の間隔秒 0の時は定時撮影しない)
+export MOTION_ROTATE=(画像の回転角度：0,90,180,270 デフォルト0)
 ```
 
 ## 起動
@@ -49,6 +50,7 @@ SDカードの書き込み回数制限が気になる場合はメモリを画像
 ```
 sudo mkdir /mnt/motion
 sudo mount -t tmpfs -o size=10m tmpfs /mnt/motion
+sudo chmod 777 /mnt/motion
 ```
 
 - mukoyama.confを編集、マウントされたメモリ領域を画像を保存先として設定する。
