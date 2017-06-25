@@ -60,3 +60,9 @@ sudo chmod 777 /mnt/motion
 export MOTION_TARGET_DIR=/mnt/motion
 export MUKOYAMA_DELETE_IMG=true
 ```
+
+## raspberry pi の起動時に自動的に起動する
+/etc/rc.localに追記
+```
+cd /home/pi/motion_for_mukoyama && ./bin/start.sh
+```
