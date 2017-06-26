@@ -7,6 +7,16 @@ raspberry pi と raspberry piカメラモジュールを使用します。
 ```
 sudo apt-get install -y motion
 ```
+## その他のインストール
+```
+sudo apt-get install -y ruby git ssh #必要に応じて
+```
+
+## リポジトリをチェックアウト
+```
+git clone https://github.com/koki-h/motion_for_mukoyama.git
+cd motion_for_mukoyama #以降、このディレクトリ内で作業する
+```
 
 ## 設定
 - /etc/modules に追記
