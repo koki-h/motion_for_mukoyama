@@ -47,5 +47,5 @@ $MOTION_HOME/lib/mk_motionconf.rb > $MOTION_HOME/motion/work/motion.conf
 
 spawn "motion -c motion/work/motion.conf" $PID_MOTION
 if [ -n "$REMOTE_STREAMING_HOST" ]; then
-  spawn "ssh -N $REMOTE_STREAMING_HOST -R $REMOTE_STREAMING_PORT:localhost:8081" $PID_STREAM
+  spawn "ssh -o ServerAliveInterval=60 -N $REMOTE_STREAMING_HOST -R $REMOTE_STREAMING_PORT:localhost:8081" $PID_STREAM
 fi
