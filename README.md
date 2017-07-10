@@ -65,6 +65,11 @@ sudo mount -t tmpfs -o size=10m tmpfs /mnt/motion
 sudo chmod 777 /mnt/motion
 ```
 
+- fstabに追記
+```
+tmpfs    /mnt/motion      tmpfs  defaults,size=10m 0 0
+```
+
 - mukoyama.confを編集、マウントされたメモリ領域を画像の保存先として設定する。
 ```
 export MOTION_TARGET_DIR=/mnt/motion
