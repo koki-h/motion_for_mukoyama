@@ -3,8 +3,9 @@ require 'fileutils'
 
 def send_picture
   ts = timestamp($filename)
-  u = "#{$url}/pictures/upload?id=#{$id}&token=#{$token}&time_stamp=#{ts}&motion_sensor=#{$motion_sensor.to_s}"
-  cmd = "curl -s -S -X POST -F file=@'#{$filename}' '#{u}'"
+  u = "#{$url}/pictures/upload"
+  cmd = "curl -s -S -X POST -F file=@'#{$filename}' -F id='#{$id}' -F token='#{$token}' -F time_stamp='#{ts}' -F motion_sensor='#{$motion_sensor.to_s}' '#{u}'"
+  puts cmd
   system(cmd)
   puts
 end
