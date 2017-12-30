@@ -477,7 +477,7 @@ stream_localhost <%= stream_localhost %>
 stream_limit 0
 
 # Set the authentication method (default: 0)
-# 0 = disabled 
+# 0 = disabled
 # 1 = Basic authentication
 # 2 = MD5 digest (the safer authentication)
 
@@ -597,7 +597,7 @@ track_stepsize 40
 quiet off
 
 # Command to be executed when an event starts. (default: none)
-# An event starts at first motion detected after a period of no motion defined by event_gap 
+# An event starts at first motion detected after a period of no motion defined by event_gap
 ; on_event_start value
 
 # Command to be executed when an event ends after a period of no motion
@@ -606,7 +606,7 @@ quiet off
 
 # Command to be executed when a picture (.ppm|.jpg) is saved (default: none)
 # To give the filename as an argument to a command append it with %f
-on_picture_save $MOTION_HOME/scripts/post.rb %f
+on_picture_save $MOTION_HOME/<%= script_for_post %> %f
 
 # Command to be executed when a motion frame is detected (default: none)
 ; on_motion_detected value
@@ -666,7 +666,7 @@ sql_query sql_query insert into security(camera, filename, frame, file_type, tim
 
 
 ############################################################
-# Database Options 
+# Database Options
 ############################################################
 
 # database type : mysql, postgresql, sqlite3 (default : not defined)
@@ -719,4 +719,3 @@ database_port 0
 
 
 ; thread /etc/motion/thread1.conf
-
